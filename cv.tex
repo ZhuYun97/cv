@@ -46,7 +46,25 @@
   \end{tabularx}\par
 }
 
-\newcommand{\me}{\textbf{Yun Zhu}}
+\newcommand{\paperentry}[2]{\item #1 \textbf{（#2）}}
+
+% Use a dedicated fallback font for rare Chinese glyphs such as "赟".
+\IfFontExistsTF{Noto Serif CJK SC}
+  {\newCJKfontfamily\rareglyphfont{Noto Serif CJK SC}[AutoFakeBold=2]}
+  {\IfFontExistsTF{Source Han Serif SC}
+    {\newCJKfontfamily\rareglyphfont{Source Han Serif SC}[AutoFakeBold=2]}
+    {\IfFontExistsTF{Songti SC}
+      {\newCJKfontfamily\rareglyphfont{Songti SC}[AutoFakeBold=2]}
+      {\IfFontExistsTF{STSong}
+        {\newCJKfontfamily\rareglyphfont{STSong}[AutoFakeBold=2]}
+        {\IfFontExistsTF{SimSun}
+          {\newCJKfontfamily\rareglyphfont{SimSun}[AutoFakeBold=2]}
+          {\IfFontExistsTF{Microsoft YaHei}
+            {\newCJKfontfamily\rareglyphfont{Microsoft YaHei}[AutoFakeBold=2]}
+            {\newCJKfontfamily\rareglyphfont{FandolSong-Regular}[AutoFakeBold=2]}}}}}
+
+\newcommand{\cvname}{朱{\rareglyphfont 赟}}
+\newcommand{\scholarurl}{https://scholar.google.com/citations?user=60HqQsQAAAAJ&hl=zh-CN}
 
 \begin{document}
 \fontsize{9.25pt}{10.55pt}\selectfont
@@ -54,10 +72,11 @@
 
 \begin{minipage}[c]{0.79\textwidth}
   \centering
-  {\zihao{2}\bfseries 朱赟\par}
+  {\zihao{2}\bfseries \cvname\par}
   \vspace{0.4em}
   电话：15158155897 \,|\, 邮箱：\href{mailto:zhuyun_dcd@zju.edu.cn}{\nolinkurl{zhuyun_dcd@zju.edu.cn}}\par
-  个人网站：\url{https://zhuyun97.github.io/}
+  个人网站：\url{https://zhuyun97.github.io/} \quad Scholar：\href{\scholarurl}{Google Scholar}\par
+  {\small 研究方向：多模态大模型后训练、图基座模型、持续预训练、领域微调、高效推理、GraphRAG}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.14\textwidth}
@@ -65,72 +84,92 @@
   \includegraphics[width=\linewidth]{portrait.png}
 \end{minipage}
 
+\cvsection{学术亮点}
+\begin{itemize}
+  \item 聚焦多模态大模型后训练、图基座模型、GraphRAG 与高效推理，博士期间在 DCD Lab 跨媒体组开展相关研究。
+  \item Scholar 页面收录 29 篇论文 / 预印本；一作 / 共一 / 通讯成果发表于 WWW、KDD、EMNLP、IJCAI 等会议。
+\end{itemize}
+
 \cvsection{教育经历}
 \cventry{浙江大学}{2020年09月 -- 2025年06月}{计算机科学与技术 博士 计算机科学与技术学院}
 \begin{itemize}
-  \item DCD Lab 跨媒体组 | 研究方向：多模态大模型后训练，图基座模型，大模型持续预训练，领域微调，高效推理，GraphRAG
-  \item 荣誉\&奖项：省优秀毕业生，陈天洲奖学金，五好研究生，优秀研究生，学术创新能力
+  \item DCD Lab 跨媒体组；荣誉\&奖项：省优秀毕业生、陈天洲奖学金、五好研究生、优秀研究生、学术创新能力
 \end{itemize}
 \vspace{-0.2em}
-\cventry{浙江工业大学}{2016年09月 -- 2020年06月}{软件工程 本科 计算机科学与技术学院、软件学院}
+\cventry{浙江工业大学}{2016年09月 -- 2020年06月}{软件工程 本科 计算机科学与技术学院 / 软件学院}
 \begin{itemize}
-  \item GPA：4.23/5.0（排名2/93）
-  \item 荣誉\&奖项：省优秀毕业生，省政府奖学金，校优秀学生一等奖学金 | 中国大学生服务外包创新创业大赛（国家二等奖，2019）
+  \item GPA：4.23/5.0（排名 2/93）；荣誉\&奖项：省优秀毕业生、省政府奖学金、校优秀学生一等奖学金、中国大学生服务外包创新创业大赛国家二等奖
 \end{itemize}
 
-\cvsection{发表的研究论文}
+\cvsection{研究论文}
 {\footnotesize
+\textbf{已发表}\par
 \begin{itemize}[leftmargin=1.2em,itemsep=0.1em,topsep=1pt]
-  \item GraphCLIP: Enhancing Transferability in Graph Foundation Models for Text-Attributed Graphs. \me, Haizhou Shi, Xiaotang Wang, Yongchao Liu, Yaoke Wang, Boci Peng, Chuntao Hong, Siliang Tang$^\dagger$.（WWW 2025, CCF A, 一作）
-  \item Graph Triple Attention Networks: A Decoupled Perspective. Xiaotang Wang, \me$^{*\dagger}$, Yongchao Liu, Haizhou Shi, Chuntao Hong.（KDD 2025, CCF A, 通讯）
-  \item Meta-Reflection: A Feedback-Free Reflection Learning Framework. Yaoke Wang, \me, Xintong Bao, Wenqiao Zhang$^\dagger$, Suyang Dai, Kehan Chen, Wenqiang Li, Gang Huang, Siliang Tang, et al.（ACL 2025 Main, 二作）
-  \item A Multi-Entity Multi-Hop Multi-Setting Graph Question Answering Benchmark. Boci Peng, Yongchao Liu, Xiaohe Bo, Jiaxin Guo, \me, Xuanbo Fan, Chuntao Hong, Yan Zhang.（ACL 2025 Main, 五作）
-  \item Transferable and Forecastable User Targeting Foundation Model. Bin Dou, Baokun Wang$^\dagger$, \me, et al.（WWW 2025 Industry Track, CCF A, 三作）
-  \item Bridging Local Details and Global Context in Text-Attributed Graphs. Yaoke Wang$^\dagger$, \me$^*$, Wenqiao Zhang$^\dagger$, Yueting Zhuang, Yunfei Li, Siliang Tang.（EMNLP Main, CCF B, 共一）
-  \item Efficient Tuning and Inference for Large Language Models on Textual Graphs, International Joint Conference on Artificial Intelligence 2024. \me, Yaoke Wang, Haizhou Shi, Siliang Tang$^\dagger$.（IJCAI 2024, CCF A, 一作）
-  \item GraphControl: Adding Conditional Control to Universal Graph Pre-trained Models for Graph Domain Transfer Learning, The Web Conference 2024. \me, Yaoke Wang, Haizhou Shi, Zhenshuo Zhang, Jiao Dian, Siliang Tang$^\dagger$.（WWW 2024 Oral, CCF A, 一作）
-  \item MARIO: Model Agnostic Recipe for Improving OOD Generalization of Graph Contrastive Learning, The Web Conference 2024. \me, Haizhou Shi, Zhenshuo Zhang, Siliang Tang$^\dagger$.（WWW 2024, CCF A, 一作）
-  \item SmartBERT: A Promotion of Dynamic Early Exiting Mechanism for Accelerating BERT Inference, International Joint Conference on Artificial Intelligence 2023. Boren Hu$^*$, \me$^*$, Jiacheng Li, Siliang Tang$^\dagger$.（IJCAI 2023, CCF A, 共一）
-  \item Structure-Aware Group Discrimination with Adaptive-View Graph Encoder: A Fast Graph Contrastive Learning Framework, European Conference on Artificial Intelligence 2023. Zhenshuo Zhang, \me, Haizhou Shi, Siliang Tang$^\dagger$.（ECAI 2023, CCF B, 二作）
-  \item RoSA: A Robust Self-Aligned Framework for Node-Node Graph Contrastive Learning, International Joint Conference on Artificial Intelligence 2022. \me, Jianhao Guo, Fei Wu, Siliang Tang$^\dagger$.（IJCAI 2022, CCF A, 一作）
+  \paperentry{GraphCLIP: Enhancing Transferability in Graph Foundation Models for Text-Attributed Graphs}{WWW 2025, CCF A, 一作}
+  \paperentry{Graph Triple Attention Network: A Decoupled Perspective}{KDD 2025, CCF A, 通讯}
+  \paperentry{Meta-Reflection: A Feedback-Free Reflection Learning Framework}{ACL 2025 Main, 二作}
+  \paperentry{M$^3$GQA: A Multi-Entity Multi-Hop Multi-Setting Graph Question Answering Benchmark}{ACL 2025 Main, 五作}
+  \paperentry{Transferable and Forecastable User Targeting Foundation Model}{WWW 2025 Industry Track, CCF A, 三作}
+  \paperentry{E-CGL: An Efficient Continual Graph Learner}{FITEE 2025, 三作}
+  \paperentry{Bridging Local Details and Global Context in Text-Attributed Graphs}{EMNLP Main, CCF B, 共一}
+  \paperentry{LLaSA: Large Language and E-Commerce Shopping Assistant}{KDD 2024 Workshop, Oral, 五作}
+  \paperentry{Efficient Tuning and Inference for Large Language Models on Textual Graphs}{IJCAI 2024, CCF A, 一作}
+  \paperentry{GraphControl: Adding Conditional Control to Universal Graph Pre-trained Models for Graph Domain Transfer Learning}{WWW 2024 Oral, CCF A, 一作}
+  \paperentry{MARIO: Model Agnostic Recipe for Improving OOD Generalization of Graph Contrastive Learning}{WWW 2024, CCF A, 一作}
+  \paperentry{SmartBERT: A Promotion of Dynamic Early Exiting Mechanism for Accelerating BERT Inference}{IJCAI 2023, CCF A, 共一}
+  \paperentry{Structure-Aware Group Discrimination with Adaptive-View Graph Encoder}{ECAI 2023, CCF B, 二作}
+  \paperentry{RoSA: A Robust Self-Aligned Framework for Node-Node Graph Contrastive Learning}{IJCAI 2022, CCF A, 一作}
 \end{itemize}
 }
 
-\cvsection{预印版论文}
 {\footnotesize
+\vspace{-0.25em}
+\textbf{在投 / 预印本}\par
 \begin{itemize}[leftmargin=1.2em,itemsep=0.1em,topsep=1pt]
-  \item Graph Retrieval-Augmented Generation: A Survey. Boci Peng$^*$, \me$^*$, Yongchao Liu, Xiaohe Bo, Haizhou Shi, Chuntao Hong, Yan Zhang$^\dagger$, Siliang Tang.（TOIS Under Review, 共一）
-  \item UniGAP: A Unified and Adaptive Graph Upsampling Method for Mitigating Over-Smoothing on Node Classification Task. Xiaotang Wang$^*$, \me$^{*\dagger}$, Haizhou Shi, Yongchao Liu, Chuntao Hong.（Under Review, 通讯）
-  \item Learning Crossmodal Interaction Patterns via Attributed Bipartite Graphs for Single-Cell Omics. Xiaotang Wang, Xuanwei Lin, \me, Hao Li, Yongqi Zhang.（NeurIPS 2025 Under Review, 三作）
-  \item GraphFAS: A Distributed Graph Feature Adaptive Selection System in Ant Group. Mingyao Li, Yice Luo, Xi Chen, \me, et al.（KDD 2026 Under Review, 四作）
-  \item SGL-PT: A Strong Graph Learner with Graph Prompt Tuning. arXiv:2302. \me, Jianhao Guo, Siliang Tang$^\dagger$.（一作）
+  \paperentry{Graph Retrieval-Augmented Generation: A Survey}{TOIS Under Review, 共一}
+  \paperentry{UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate Over-Smoothing in Node Classification Tasks}{Under Review, 通讯}
+  \paperentry{Learning Crossmodal Interaction Patterns via Attributed Bipartite Graphs for Single-Cell Omics}{NeurIPS 2025 Under Review, 三作}
+  \paperentry{GraphFAS: A Distributed Graph Feature Adaptive Selection System in Ant Group}{KDD 2026 Under Review, 四作}
+  \paperentry{SGL-PT: A Strong Graph Learner with Graph Prompt Tuning}{arXiv:2302, 一作}
+\end{itemize}
+}
+
+{\footnotesize
+\vspace{-0.25em}
+\textbf{Scholar 上的其他近期条目}\par
+\begin{itemize}[leftmargin=1.2em,itemsep=0.1em,topsep=1pt]
+  \item 2026：MMFineReason: Closing the Multimodal Reasoning Gap via Open Data-Centric Methods；ChartVerse: Scaling Chart Reasoning via Reliable Programmatic Synthesis from Scratch；Tracing the Roots: A Multi-Agent Framework for Uncovering Data Lineage in Post-Training LLMs；Bidirectional Curriculum Generation: A Multi-Agent Framework for Data-Efficient Mathematical Reasoning；From Factors to Methods: A Comprehensive Survey on Visual Instruction Tuning Data Selection；PILOT: Planning via Internalized Latent Optimization Trajectories for Large Language Models
+  \item 2025：OpenDataArena: A Fair and Open Arena for Benchmarking Post-Training Dataset Value；Scaling graph chain-of-thought reasoning: A multi-agent framework with efficient llm serving；Wiseedit: Benchmarking cognition-and creativity-informed image editing；Closing the Data Loop: Using OpenDataArena to Engineer Superior Training Datasets；Learning Unified User Quantized Tokenizers for User Representation
 \end{itemize}
 }
 
 \cvsection{实习经历}
 \cventryloc{蚂蚁集团}{2024年02月 -- 至今}{杭州}{研究型实习生 \quad 平台事业技术部}
 \begin{itemize}
-  \item 图大模型的研究与开发
-  \item 支付宝垂域大模型持续预训练，领域微调
+  \item 参与图大模型研究与开发，聚焦业务场景中的模型能力落地。
+  \item 负责支付宝垂域大模型持续预训练与领域微调相关工作。
 \end{itemize}
 
 \cvsection{专业竞赛}
 \cventryone{KDD CUP 2024——利用大语言模型辅助在线购物}{2024年05月 -- 2024年07月}
 \begin{itemize}
-  \item 五个赛道平均排名第三（3/508），多语言赛道获得“Best Student Awards”
-  \item 发表 KDD 2024 Workshop paper（Oral）: ``LLaSA: Large Language and E-Commerce Shopping Assistant.''
+  \item 五个赛道平均排名第三（3/508），多语言赛道获得 ``Best Student Awards''。
+  \item 相关工作产出 KDD 2024 Workshop（Oral）论文。
 \end{itemize}
 \vspace{-0.2em}
 \cventryone{AgentSociety Challenge @ WWW 2025——利用Agent进行商品推荐}{2025年01月 -- 2025年02月}
 \begin{itemize}
-  \item 排名第五（5/76）
+  \item 排名第五（5/76）。
 \end{itemize}
 \vspace{-0.2em}
 \cventryone{中国大学生服务外包创新创业大赛——网络零售平台商品分类}{2019年03月 -- 2019年05月}
 \begin{itemize}
-  \item 解决针对电子商品的短文本千分类难题（国家二等奖）
+  \item 解决电子商品短文本千分类难题，获国家二等奖。
 \end{itemize}
 
-\cvsection{专业技能}
+\cvsection{技术关键词}
+\begin{itemize}
+  \item 多模态大模型后训练、图基座模型、持续预训练、领域微调、高效推理、GraphRAG
+\end{itemize}
 
 \end{document}
