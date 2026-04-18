@@ -49,6 +49,7 @@
   \end{tabularx}\par
 }
 
+\newcommand{\paperentry}[2]{\item #1 \textbf{（#2）}}
 \newcommand{\cvmeta}[1]{{\color{cvmuted}\small #1}}
 \newcommand{\skillrow}[2]{\textbf{#1}：#2\par}
 
@@ -75,7 +76,7 @@
 \sloppy
 
 \begin{minipage}[c]{0.82\textwidth}
-  \raggedright
+  \centering
   {\zihao{2}\bfseries \cvname\par}
   \vspace{0.28em}
   \cvmeta{浙江大学计算机博士 \,|\, 上海人工智能实验室青年研究员}\par
@@ -87,47 +88,48 @@
   \includegraphics[width=\linewidth]{portrait.png}
 \end{minipage}
 
-\cvsection{教育背景}
+\cvsection{教育经历}
 \cventry{浙江大学}{2020年09月 -- 2025年06月}{计算机科学与技术 博士 计算机科学与技术学院}
 \begin{itemize}
-  \item DCD Lab 跨媒体组；荣誉：省优秀毕业生、陈天洲奖学金、五好研究生、优秀研究生、学术创新能力奖
+  \item DCD Lab 跨媒体组；荣誉\&奖项：省优秀毕业生、陈天洲奖学金、五好研究生、优秀研究生、学术创新能力
 \end{itemize}
 \vspace{-0.2em}
 \cventry{浙江工业大学}{2016年09月 -- 2020年06月}{软件工程 本科 计算机科学与技术学院 / 软件学院}
 \begin{itemize}
-  \item GPA：4.23/5.0（排名 2/93）；荣誉：省优秀毕业生、省政府奖学金、校优秀学生一等奖学金
+  \item GPA：4.23/5.0（排名 2/93）；荣誉\&奖项：省优秀毕业生、省政府奖学金、校优秀学生一等奖学金、中国大学生服务外包创新创业大赛国家二等奖
 \end{itemize}
 
-\cvsection{核心亮点}
+\cvsection{个人概述}
 \begin{itemize}
-  \item 聚焦多模态后训练数据、数据价值评估与高价值样本构建，能够围绕 VLM 场景设计数据筛选、质量校验、效果分析与迭代优化闭环。
-  \item 参与 MMFineReason、OpenDataArena、SciVerse 等项目，覆盖 \textbf{1.8M samples / 5.1B solution tokens}、后训练数据选择、data genealogy / comparison 与多源科学数据标准化。
-  \item 发表或合作发表 \textbf{29 篇论文 / 预印本}，Google Scholar \textbf{900+ 引用}，代表性成果发表于 WWW、KDD、ACL、EMNLP、IJCAI。
+  \item 聚焦多模态后训练数据、数据价值评估与高价值样本构建，持续围绕 VLM 场景设计数据筛选、质量校验和迭代优化流程。
+  \item 参与 MMFineReason、OpenDataArena、SciVerse 等项目，覆盖多源数据标准化、后训练数据选择、数据谱系分析、数据比较与评测平台建设。
+  \item 具有研究与产业双背景，曾在蚂蚁集团参与垂域大模型持续预训练、领域微调与 GraphRAG 相关研究及数据支撑方案。
 \end{itemize}
 
 \cvsection{工作经历}
-\cventryone{上海人工智能实验室（Shanghai AI Lab）\quad 青年研究员}{当前}
+\cventryone{上海人工智能实验室（Shanghai AI Lab）}{当前}
 \begin{itemize}
-  \item 与\href{https://scholar.google.com/citations?user=RD5kSG0AAAAJ&hl=zh-CN}{吴郦军}、\href{https://scholar.google.com/citations?user=PopTv7kAAAAJ&hl=zh-CN}{何聪辉}博士合作开展研究，围绕 vision-language models 的后训练与多模态数据价值评估推进研究工作。
-  \item 聚焦训练数据价值判断、高价值样本识别与数据构建，面向推理与决策任务设计数据筛选、质量校验、效果分析与迭代优化流程。
+  \item 当前任青年研究员，与\href{https://scholar.google.com/citations?user=RD5kSG0AAAAJ&hl=zh-CN}{吴郦军}、\href{https://scholar.google.com/citations?user=PopTv7kAAAAJ&hl=zh-CN}{何聪辉}博士合作开展研究。
+  \item 围绕 vision-language models 的后训练与多模态数据价值评估开展研究，重点关注训练数据价值判断、高价值样本识别与数据构建。
+  \item 参与面向推理与决策任务的数据流程设计，覆盖数据筛选、质量校验、效果分析与数据迭代，提升模型对真实任务的对齐能力。
 \end{itemize}
 \vspace{-0.2em}
-\cventryloc{蚂蚁集团}{2024年02月 -- 2025年05月}{杭州}{平台事业技术部 \quad 研究型实习生}
+\cventryloc{蚂蚁集团}{2024年02月 -- 2025年05月}{杭州}{研究型实习生 \quad 平台事业技术部}
 \begin{itemize}
   \item 在 Yongchao Liu 指导下参与支付宝垂域大模型相关工作，围绕持续预训练、领域微调、Post-training 与 GraphRAG 推进研究原型和方案验证。
-  \item 使用 Python 开发数据处理脚本与实验流程，支撑数据准备、训练验证与面向业务需求的数据方案探索。
+  \item 使用 Python 开发数据处理脚本与实验流程，面向业务需求探索模型训练与数据支撑方案。
 \end{itemize}
 
 \cvsection{项目经历}
 \cventryone{MMFineReason}{\href{https://mmfinereason.github.io/}{项目主页}}
 \begin{itemize}[leftmargin=1.2em,itemsep=0.1em,topsep=1pt]
-  \item 面向细粒度多模态推理任务，参与构建后训练数据集，数据规模达到 \textbf{1.8M samples} 与 \textbf{5.1B solution tokens}。
+  \item 参与构建面向细粒度多模态推理的后训练数据集，项目规模为 1.8M samples、5.1B solution tokens。
   \item 参与设计四阶段数据管线：多源数据收集与标准化、高价值样本筛选、CoT rationale 生成、多维质量校验，解决长链路多模态推理数据稀缺与质量不稳问题。
 \end{itemize}
 \vspace{-0.2em}
 \cventryone{OpenDataArena}{\href{https://opendataarena.github.io/}{项目主页}}
 \begin{itemize}[leftmargin=1.2em,itemsep=0.1em,topsep=1pt]
-  \item 参与构建面向后训练数据价值的开放评测与分析项目，核心模块包括 leaderboard、data genealogy、data comparison。
+  \item 参与构建面向后训练数据价值的开放评测与分析项目，核心包括 leaderboard、data genealogy、data comparison 等模块。
   \item 面向开放数据比较、数据价值评估与训练集选择问题，支持数据复用、可追溯分析与数据资产化建设。
 \end{itemize}
 \vspace{-0.2em}
@@ -142,19 +144,19 @@
 \skillrow{数据方向}{多模态数据构建、后训练数据选择、数据质量评估、高价值数据识别与生成、GraphRAG、VLM post-training}
 \skillrow{平台与分析}{benchmark / leaderboard、data genealogy、data comparison、质量校验、版本管理、可追溯与数据复用}
 
-\cvsection{代表性成果}
+\cvsection{研究成果}
 {\footnotesize
 \begin{itemize}[leftmargin=1.2em,itemsep=0.1em,topsep=1pt]
-  \item \textbf{WWW 2025，一作} GraphCLIP: Enhancing Transferability in Graph Foundation Models for Text-Attributed Graphs
-  \item \textbf{KDD 2025，通讯} Graph Triple Attention Network: A Decoupled Perspective
-  \item \textbf{ACL 2025 Main，二作} Meta-Reflection: A Feedback-Free Reflection Learning Framework
-  \item \textbf{EMNLP 2024 Main，共一} Bridging Local Details and Global Context in Text-Attributed Graphs
-  \item \textbf{IJCAI 2024，一作} Efficient Tuning and Inference for Large Language Models on Textual Graphs
+  \paperentry{GraphCLIP: Enhancing Transferability in Graph Foundation Models for Text-Attributed Graphs}{WWW 2025, 一作}
+  \paperentry{Graph Triple Attention Network: A Decoupled Perspective}{KDD 2025, 通讯}
+  \paperentry{Meta-Reflection: A Feedback-Free Reflection Learning Framework}{ACL 2025 Main, 二作}
+  \paperentry{Bridging Local Details and Global Context in Text-Attributed Graphs}{EMNLP 2024 Main, 共一}
+  \paperentry{Efficient Tuning and Inference for Large Language Models on Textual Graphs}{IJCAI 2024, 一作}
 \end{itemize}
 \textbf{完整论文与预印本列表：}\href{\scholarurl}{Google Scholar}
 }
 
-\cvsection{竞赛与荣誉}
+\cvsection{专业竞赛}
 \cventryone{DCVLR @ NeurIPS 2025——Data Curation for Vision Language Reasoning}{2025年06月 -- 2025年11月}
 \begin{itemize}
   \item Final Leaderboard 第四名（Team: ZhuYun - PJLab，38.84\%），围绕 vision-language reasoning 任务提交数据构建方案与技术报告。
@@ -168,6 +170,11 @@
 \cventryone{AgentSociety Challenge @ WWW 2025——利用Agent进行商品推荐}{2025年01月 -- 2025年02月}
 \begin{itemize}
   \item 排名第五（5/76）。
+\end{itemize}
+\vspace{-0.2em}
+\cventryone{中国大学生服务外包创新创业大赛——网络零售平台商品分类}{2019年03月 -- 2019年05月}
+\begin{itemize}
+  \item 解决电子商品短文本千分类难题，获国家二等奖。
 \end{itemize}
 
 \end{document}
