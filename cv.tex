@@ -2,6 +2,7 @@
 \documentclass[UTF8]{ctexart}
 
 \usepackage[a4paper,left=1.15cm,right=1.15cm,top=0.9cm,bottom=0.95cm]{geometry}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{tabularx}
@@ -74,14 +75,29 @@
 \fontsize{9.6pt}{11.35pt}\selectfont
 \sloppy
 
-\begin{center}
+\begin{minipage}[c]{0.82\textwidth}
+  \centering
   {\zihao{2}\bfseries \cvname\par}
-  \vspace{0.3em}
-  {\small 求职方向：多模态数据管线 / 大模型数据工程 / 数据中心化基础设施\par}
-  \vspace{0.2em}
+  \vspace{0.28em}
   \cvmeta{浙江大学计算机博士 \,|\, 上海人工智能实验室 Junior Researcher \,|\, 29 篇论文 / 预印本 \,|\, 920+ Scholar 引用}\par
   \cvmeta{电话：15158155897 \,|\, 邮箱：\href{mailto:zhuyun_dcd@zju.edu.cn}{\nolinkurl{zhuyun_dcd@zju.edu.cn}} \,|\, 个人网站：\url{https://zhuyun97.github.io/} \,|\, Scholar：\href{\scholarurl}{主页链接}}
-\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.13\textwidth}
+  \raggedleft
+  \includegraphics[width=\linewidth]{portrait.png}
+\end{minipage}
+
+\cvsection{教育经历}
+\cventry{浙江大学}{2020年09月 -- 2025年06月}{计算机科学与技术 博士 计算机科学与技术学院}
+\begin{itemize}
+  \item DCD Lab 跨媒体组；荣誉\&奖项：省优秀毕业生、陈天洲奖学金、五好研究生、优秀研究生、学术创新能力
+\end{itemize}
+\vspace{-0.2em}
+\cventry{浙江工业大学}{2016年09月 -- 2020年06月}{软件工程 本科 计算机科学与技术学院 / 软件学院}
+\begin{itemize}
+  \item GPA：4.23/5.0（排名 2/93）；荣誉\&奖项：省优秀毕业生、省政府奖学金、校优秀学生一等奖学金、中国大学生服务外包创新创业大赛国家二等奖
+\end{itemize}
 
 \cvsection{个人概述}
 \begin{itemize}
@@ -139,17 +155,6 @@
 \end{itemize}
 \textbf{完整论文与预印本列表：}\href{\scholarurl}{Google Scholar}
 }
-
-\cvsection{教育经历}
-\cventry{浙江大学}{2020年09月 -- 2025年06月}{计算机科学与技术 博士 计算机科学与技术学院}
-\begin{itemize}
-  \item DCD Lab 跨媒体组；荣誉\&奖项：省优秀毕业生、陈天洲奖学金、五好研究生、优秀研究生、学术创新能力
-\end{itemize}
-\vspace{-0.2em}
-\cventry{浙江工业大学}{2016年09月 -- 2020年06月}{软件工程 本科 计算机科学与技术学院 / 软件学院}
-\begin{itemize}
-  \item GPA：4.23/5.0（排名 2/93）；荣誉\&奖项：省优秀毕业生、省政府奖学金、校优秀学生一等奖学金、中国大学生服务外包创新创业大赛国家二等奖
-\end{itemize}
 
 \cvsection{专业竞赛}
 \cventryone{DCVLR @ NeurIPS 2025——Data Curation for Vision Language Reasoning}{2025年06月 -- 2025年11月}
